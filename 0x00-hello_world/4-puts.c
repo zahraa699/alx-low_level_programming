@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * Description :  A c programming that prints word eith puts function
+ * Description: A c program that prints with put function
  *
- * Return : Always 0 (sucess)
- */
+ * Return: Always 0 (sucess)
+*/
 
 int main(void)
 {
