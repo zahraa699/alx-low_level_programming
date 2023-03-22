@@ -6,7 +6,9 @@
  * @n: takes number input
  */
 
-void print_times_table(int n)
+void print_times_table(int n);
+
+int main(void)
 {
 	int prod, mult, num;
 
