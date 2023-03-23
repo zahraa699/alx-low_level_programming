@@ -2,11 +2,13 @@
 
 /**
  * numLength - this return the length of string
- *
  * @num: operand number
  *
- * return: number of digit
+ * Description:this program using function to return numbers
+ *
+ * Return: number of digit
  */
+
 int numLength(int num)
 {
 	int length = 0;
