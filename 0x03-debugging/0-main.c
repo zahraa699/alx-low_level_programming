@@ -7,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 
-int positive_or_negative(int n)
+void positive_or_negative(int n)
 {
 	if (n > 0)
 		printf("%i is positive\n", n);
