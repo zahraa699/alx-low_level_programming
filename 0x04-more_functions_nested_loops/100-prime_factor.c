@@ -1,60 +1,40 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
- * _sqrt - Short description, single line
- * @x : input number
- *
- * Return: Description of the returned value
+ * main - finds and prints the largest prime factor of the number 612852475143
+ * followed by a new line
+ * Return: Always 0 (Success)
  */
-
-double _sqrt(double x)
-{
-	float sqrt, tmp;
-
-	sqrt = x / 2;
-	tmp = 0;
-
-	while (sqrt != tmp)
-	{
-		tmp = sqrt;
-		sqrt = (x / tmp + tmp) / 2;
-	}
-	return (sqrt);
-}
-
-/**
- * largest_prime_factor - find and prints largest prime num
- *
- * @n: input number to find
- */
-
-void largest_prime_factor(long int n)
-{
-	int pNum, largest;
-
-	while (n % 2 == 0)
-		n == n / 2;
-	for (pNum = 3; pNum <= _sqrt(n); pNum += 2)
-	{
-		while (n % pNum == 0)
-		{
-			n = n / pNum;
-			largest = pNum;
-		}
-	}
-	if (n > 2)
-		largest = n;
-	printf("%d", largest);
-}
-
-/**
- * main - entry point
- *
- * Return: always 0 (success)
- */
-
 int main(void)
 {
-	largest_prime_factor(612852475143);
+	long int n;
+	long int max;
+	long int i;
+
+	n = 612852475143;
+	max = -1;
+
+	while (n % 2 == 0)
+	{
+		max = 2;
+		n /= 2;
+	}
+
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
+		{
+			max = i;
+			n = n / i;
+		}
+	}
+
+	if (n > 2)
+		max = n;
+
+	printf("%ld\n", max);
+
 	return (0);
 }
+
