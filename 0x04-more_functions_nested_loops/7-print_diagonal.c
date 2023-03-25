@@ -1,25 +1,31 @@
 #include "main.h"
 
 /**
- * print_diagonal - print a diagonal line
+ * print_diagonal - print a diagonal line.
  *
- * @n: input number to print symbol
- */
-
+ * @n: is the number of times that character \
+ * has to be printed
+*/
 void print_diagonal(int n)
 {
-	int i, j;
-
 	if (n <= 0)
-		_putchar('\n');
-	else
 	{
-		for (i = 1; i <= n; i++)
+		_putchar('\n');
+	} else
+	{
+		int i, j;
+
+		for (i = 0; i < n; i++)
 		{
-			for (j = 1; j <= i; j++)
-				_putchar(' ');
-			_putchar(92); /* acsi code is equal '/' */
+			for (j = 0; j < n; j++)
+			{
+				if (j == i)
+					_putchar('\\');
+				else if (j < i)
+					_putchar(' ');
+			}
 			_putchar('\n');
 		}
 	}
 }
+
