@@ -8,17 +8,17 @@
 
 void print_number(int n)
 {
-int n1;
+unsigned int c;
 
-n1 = n;
+c = n;
 if (n < 0)
 {
 _putchar('-');
-n1 = -n;
+c = -n;
 }
-if (n1 / 10 != 0)
+if (c / 10 != 0)
 {
-print_number(n1 / 10);
-_putchar((n1 % 10) + '0');
+print_number(c / 10);
+_putchar((c % 10) + '0');
 }
 }
