@@ -13,13 +13,13 @@ int _sqrt_recursion(int n)
 
 /**
  * square - find square root
- * @y: int to find square root
+ * @n: int to find square root
  * @result: square root
  * Return: value of square
  */
 
 
-int square(int y, int result)
+int square(int n, int result)
 {
 	if (result * result == n)
 		return (result);
