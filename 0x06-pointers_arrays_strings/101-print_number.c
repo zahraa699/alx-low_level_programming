@@ -13,12 +13,12 @@ unsigned int c;
 c = n;
 if (n < 0)
 {
-putchar('-');
+_putchar('-');
 c = -n;
 }
 if (c / 10 != 0)
 {
 print_number(c / 10);
-putchar((c % 10) + '0');
+_putchar((c % 10) + '0');
 }
 }
