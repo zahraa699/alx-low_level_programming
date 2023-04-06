@@ -14,8 +14,9 @@ int check_prime(int n, int res);
 int is_palindrome(char *s);
 int last_index(char *s);
 int check(char *s, int start, int end, int pair);
-
-
+int wildcmp(char *s1, char *s2);
+int *move_star(char *s2);
+int inception_star(char *s1, char *s2);
 
 
 #endif
