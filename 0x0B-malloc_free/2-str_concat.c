@@ -1,24 +1,21 @@
 #include "main.h"
 
 /**
- * _strlen - find length of string
- * @s: string parameter
- *
- * Description: Longer description of the function)?
- *
- * Return: returned integer value
+ * _strlen - length of a string
+ * @s: input char
+ * Return: length of a string
  */
 
 int _strlen(char *s)
 {
-	int size = 0;
+int l = 0;
 
-	while (*s != '\0')
-	{
-		s++;
-		size++;
-	}
-	return (size);
+while (*s != '\0')
+{
+s++;
+l++;
+}
+return (l);
 }
 
 /**
@@ -30,28 +27,29 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int A1, A2;
-	char *conc, *tmp;
+unsigned int l1, l2;
+char *conc, *tmp;
 
-	if (!s1)
-		s1 = "";
-	else
-		A1 = _strlen(s1);
+if (!s1)
+s1 = "";
+else
+l1 = _strlen(s1);
 
-	if (!s2)
-		s2 = "";
-	else
-		A2 = _strlen(s2);
+if (!s2)
+s2 = "";
+else
+l2 = _strlen(s2);
 
-	conc = malloc(A1 + A2 + 1)
-	if (!conc)
-		return (0);
+conc = malloc(l1 + l2 + 1);
+if (!conc)
+return (0);
 
-	tmp = conc;
+tmp = conc;
+while (*s1)
+*tmp++ = *s1++;
 
-	while (*s1)
-		*tmp++ = *s1++;
-	while ((*tmp++ = *s2++))
-		;
-	return (conc);
+while ((*tmp++ = *s2++))
+;
+
+return (conc);
 }
