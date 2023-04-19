@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - print name of this source file
- *
- * Return: the returned value is zero
+ *main - check the code.
+ *Return:Always 0.
  */
 
 int main(void)
 {
-	printf("%s\n", _FILE_);
-	return (0);
+printf("%s\n", __FILE__);
+return (0);
 }
