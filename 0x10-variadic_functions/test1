@@ -1,0 +1,75 @@
+#include "variadic_functions.h"
+
+/**
+ * format_char - format character
+ * @separator: the string of separator
+ * @ap: pointer
+ * Description: Longer description of the function)?
+ *
+ * Return: Description of the returned value
+ */
+
+void format_char(char *separator, va_list ap)
+{
+	printf("%s%c", separator, va_arg(ap, int));
+}
+
+/**
+ * format_int - formats integer
+ * @separator: the string of separator
+ * @ap: pointer
+ *
+ * Description: Longer description of the function)?
+ *
+ * Return: Description of the returned value
+ */
+
+void format_int(char *separator, va_list ap)
+{
+	printf("%s%d", separator, va_arg(ap, int));
+}
+
+/**
+ * format_float - formats integer
+ * @separator: the string of separator
+ * @ap: pointer
+ *
+ * Description: Longer description of the function)?
+ *
+ * Return: Description of the returned value
+ */
+
+void format_float(char *separator, va_list ap)
+{
+	printf("%s%f", separator, va_arg(ap, double));
+}
+
+/**
+ * format_string - formats integer
+ * @separator: the string of separator
+ * @ap: pointer
+ *
+ * Description: Longer description of the function)?
+ *
+ * Return: Description of the returned value
+ */
+
+void format_string(char *separator, va_list ap)
+{
+	char *str = va_arg(ap, char *);
+
+	switch ((int)(!str))
+	case 1:
+		str = "(nil)";
+
+        printf("%s%s", separator, str);
+}
+
+/**
+ * print_all - print anything
+ * @format: the string of format
+ *
+ * Description: Longer description of the function)?
+ *
+ * Return: Description of the returned value
+ */
