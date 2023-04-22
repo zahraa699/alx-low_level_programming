@@ -1,18 +1,13 @@
-#include "function_pointers.h"
 #include "3-calc.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
 /**
- * get_op_func - this function get an operator
- * @s: the operator passed as arg to the program
- *
- * Description: Longer description of the function)?
- *
- * Return: Description of the returned value
+ * get_op_func - get an operation
+ * @s: The operator passed as argument to the program
+ * Return: No
  */
-
 int (*get_op_func(char *s))(int, int)
 {
 op_t ops[] = {
@@ -23,13 +18,17 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
-int i;
 
-while (i < 5)
+int i = 0;
+
+while (ops[i].op)
 {
-if (s && s[0] == ops[i].op[0] && !s[1])
+if (strcmp(s, ops[i].op) == 0)
+{
 return (ops[i].f);
-i++
 }
-return (NULL);
+i++;
+}
+printf("Error\n");
+exit(99);
 }
